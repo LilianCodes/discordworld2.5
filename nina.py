@@ -10,7 +10,11 @@ bot = dis.Bot()
 async def on_ready():
     print(f"{bot.user} is ready!")
 
-@bot.slash_command(name = "char-creation", description = "Create your SwordWorld 2.5 character.")
+@bot.slash_command(name = "ping", description = "Find out how bad the latency is. ;)")
+async def pong(ctx):
+    await ctx.send(f'My ping is currently: {bot.latency}')
+
+@bot.slash_command(name = "charcreation", description = "Create your SwordWorld 2.5 character.")
 async def char_create(ctx):
     pass
 
